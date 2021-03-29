@@ -7,10 +7,11 @@ import sys
 MAX_FRQ = 2000
 SLICE_SIZE = 0.15 #seconds
 WINDOW_SIZE = 0.25 #seconds
-NUMBER_DIC = {}
 
+# TODO: implement this dictionary
+NUMBER_DIC = {}
 LOWER_FRQS = [697, 770, 852, 941]
-HIGHER_FRQS = [1209, 1336, 1477, 1633]
+HIGHER_FRQS = [1209, 1336, 1477]
 FRQ_THRES = 20
 
 def get_max_frq(frq, fft):
@@ -87,7 +88,7 @@ def main(file):
         end_index = start_index + slice_sample_size
 
     print("Program completed")
-    print("User typed: " + str(output))
+    print("Decoded input: " + str(output))
 
 if __name__ == '__main__':
     if len(sys.argv) != 2 or not os.path.isfile(sys.argv[1]):
