@@ -14,4 +14,4 @@ def hello_world():
 
     denomination = int(clf.predict([[reflectance,weight]])[0])
     #print(denomination)
-    return json.dumps({"denomination":denomination})
+    return json.dumps({"weight":weight, "reflectance":reflectance ,"denomination":denomination})
